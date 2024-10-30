@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/utils/AppColor.dart';
 import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
-
+import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenMiddle.dart';
+import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenUpper.dart';
+import 'package:untitled/widgets/ProductScreen/ImageComponents/ProductImage.dart';
 
 // stateful då skärmen måste vara dynamisk
 class HomeScreen extends StatefulWidget {
@@ -24,17 +26,21 @@ class _HomeScreenState extends State<HomeScreen> {
         // huvuddelen av sidan,
         body:
             //stack layout så man kan positonera element ovanpå bättre
-        Stack(
-        children: [
-          Text("Hello!",
-          style: Theme.of(context).textTheme.headlineLarge,),
 
-          const SizedBox(height: 20,),
-          const OrderBtn(),
-
-        ],
+        //spara mer minne att importera alla statiska element, då vi lättare kan sätta const  på dem
+        const Stack(
+          children: [
+            ProductScreenUpper(),
+            SizedBox(height: 20,),
+            ProductScreenMiddle(),
+            Positioned(child: ProductImage(
+              url:'assets/images/honey1.png',
+              width: 200.0,
+              height: 200.0,
+              fit: BoxFit.cover,
+            ))
+          ],
         ),
-
 
     );
 
@@ -52,15 +58,7 @@ class YellowBackroundContainer extends StatelessWidget{
   }
 }
 
-class ProductImage extends StatelessWidget{
-  const ProductImage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
 
 class ProductHeaderContent extends StatelessWidget{
   const ProductHeaderContent({super.key});

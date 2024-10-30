@@ -12,3 +12,13 @@ KOLLA UPP:
 kolla upp perfekta sätt
 att hantera höjd/bredd
 (mediaquery?)
+
+
+10-30
+
+*       kolla vad som tar minst minne:
+        importera statiska variabler (Strings etc)
+        eller skapa nya
+
+*       Lazy Imports på reusable components? / klass import?
+
