@@ -6,3 +6,9 @@
 4. interface för alla livscyklar på komponenter? initState, buildset, Stateset, Statedispose (läs mer)
 5. testa att skapa texts för key value firebase värden
 
+KOLLA UPP:
+
+
+kolla upp perfekta sätt
+att hantera höjd/bredd
+(mediaquery?)
