@@ -13,7 +13,7 @@ class ProductScreenMiddle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
+      color: Colors.red,
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

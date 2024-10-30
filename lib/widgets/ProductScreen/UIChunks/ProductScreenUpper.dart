@@ -14,7 +14,7 @@ class ProductScreenUpper extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
   return const ProductPreviewCard(child: Column(
-    crossAxisAlignment: CrossAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       ProductTitleText(text: "WSSNFE"), // här kan vi lägga in data i child elementet
       BodyText(text: "With hints of chocolate and honey", Color: Colors.white,),

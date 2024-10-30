@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/utils/AppColor.dart';
 import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
+import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenBottom.dart';
 import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenMiddle.dart';
 import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenUpper.dart';
 import 'package:untitled/widgets/ProductScreen/ImageComponents/ProductImage.dart';
@@ -28,18 +29,15 @@ class _HomeScreenState extends State<HomeScreen> {
             //stack layout så man kan positonera element ovanpå bättre
 
         //spara mer minne att importera alla statiska element, då vi lättare kan sätta const  på dem
-        const Stack(
-          children: [
-            ProductScreenUpper(),
-            SizedBox(height: 20,),
-            ProductScreenMiddle(),
-            Positioned(child: ProductImage(
-              url:'assets/images/honey1.png',
-              width: 200.0,
-              height: 200.0,
-              fit: BoxFit.cover,
-            ))
-          ],
+          const SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children:  [
+              ProductScreenUpper(),
+              ProductScreenMiddle(),
+              ProductScreenBottom()
+            ],
+          )
         ),
 
     );
@@ -47,7 +45,14 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
 }
-
+/*
+*  Positioned(child: ProductImage(
+              url:'assets/images/honey1.png',
+              width: 200.0,
+              height: 200.0,
+              fit: BoxFit.cover,
+            ))
+* */
 class YellowBackroundContainer extends StatelessWidget{
   const YellowBackroundContainer({super.key});
 
