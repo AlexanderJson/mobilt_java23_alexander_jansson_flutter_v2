@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
            children: [
 
-             const Column(
+              Column(
                   // stretchar ut bakgrunden på hela skärmen
                  crossAxisAlignment: CrossAxisAlignment.stretch,
 
@@ -47,13 +47,13 @@ class _HomeScreenState extends State<HomeScreen> {
                  // Bilden av produkt
              ), Positioned(
                 top: MediaQuery.of(context).size.height * 0,
-                left: MediaQuery.of(context).size.height * 0.75,
+                left: MediaQuery.of(context).size.height * 0.3,
                 right: 0,
                child:  Center(
                  child: ProductImage(url: 'assets/images/honeyandbees.png',
                    width: MediaQuery.of(context).size.width * 0.4,
                    height: MediaQuery.of(context).size.height * 0.5,
-                   fit: BoxFit.cover,),
+                   fit: BoxFit.scaleDown,),
                ),
                
                 )

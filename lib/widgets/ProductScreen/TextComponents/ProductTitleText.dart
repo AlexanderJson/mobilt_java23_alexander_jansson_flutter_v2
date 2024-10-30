@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 class ProductTitleText extends StatelessWidget{
 
   final String text;
-  const ProductTitleText({super.key, required this.text});
+  final fontSize;
+  const ProductTitleText({super.key, required this.text, required this.fontSize});
   @override
   Widget build(BuildContext context) {
 
     return Text(
       text,
       style:  TextStyle(
-        fontSize: MediaQuery.of(context).size.height * 0.1,
+        fontSize: fontSize,
         fontWeight: FontWeight.bold,
         color: Colors.white,
         letterSpacing: 1.5,

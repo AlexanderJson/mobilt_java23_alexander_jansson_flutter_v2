@@ -14,45 +14,45 @@ class ProductScreenMiddle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final paddingHorizontal = screenWidth * 0.2;
+    final paddingVertical = screenHeight * 0.05;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: paddingHorizontal, vertical: paddingVertical),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          Align(
               alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
-              child:  const CursiveText(text: 'CHOCOLATE, SOFT FLAVOR, LIQOURICE', Color: Colors.black,),
+                child:  const CursiveText(text: 'CHOCOLATE, SOFT FLAVOR, LIQOURICE', Color: Colors.black,),
           ),
-          Container(
+          Align(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
             child:   const HeaderText(text: 'New Zeeland, Marlborough', Color: Colors.black, fontSize: 20,),
 
           ),
-          Container(
+          Align(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
             child:  const CursiveText(text: '250ml - Round Bottle', Color: Colors.black,),
           ),
-          Container(
+          Align(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400,right: 400),
             child:   const CustomExpansionTile(title: 'Ingredients: ', content: 'Chocolate, honey, liqourice, bees'),
           ),
-          Container(
+          Align(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400, right: 400),
             child:   const CustomExpansionTile(title: 'Attributes: ',
                 content: 'A new type of honey with wonderful combinations of'
                     'chocolate, honey, liqourice and berries. '),
           ),
-        Container(
+        Align(
             alignment: Alignment.centerRight,
-            padding: const EdgeInsets.only(top: 20, bottom: 0,left: 0, right: 400),
-            child: const Column(
+            child: Column(
               children: [
-                OrderBtn(height: 50.0 , width: 200.0,text: 'Order'),
+                OrderBtn(height: screenHeight * 0.07 , width: screenWidth * 0.12,text: 'Order'),
               ],)
           ),
         ],

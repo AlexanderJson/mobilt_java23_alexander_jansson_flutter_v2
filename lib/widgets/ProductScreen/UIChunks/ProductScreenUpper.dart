@@ -13,36 +13,24 @@ class ProductScreenUpper extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    final paddingHorizontal = MediaQuery.of(context).size.width * 0.2;
+
     // returnerar gul container
   return ProductPreviewCard(
-      // column layout inuti
+        child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
+
+    // column layout inuti
       child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
 
-      Container(
-        alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 400),
-        child:const ProductTitleText(text: "WSSNFE") ,
-      ),
-
-      Container(
-        alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 400),
-        padding: const EdgeInsets.only(bottom: 50.0),
-        child:   const BodyText(text: "With hints of chocolate and honey", Color: Colors.white,),
-      ),
-
-      Container(
-        alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 400),
-        padding: const EdgeInsets.only(bottom: 0),
-        child:    HeaderText(text: "240 SEK", Color: Colors.white, fontSize: MediaQuery.of(context).size.height * 0.06,
-    ),
-      ),
+         ProductTitleText(text: "WSSNFE", fontSize: paddingHorizontal * 0.4,) ,
+         BodyText(text: 'lkdsjcdsocdsojdsjso', Color: Colors.white, fontSize:  paddingHorizontal * 0.1),
+         HeaderText(text: "240 :- ", Color: Colors.white, fontSize: paddingHorizontal * 0.1,),
        // här kan vi lägga in data i child elementet
 
     ],
-  ));
+  )));
   }
 }
