@@ -29,15 +29,37 @@ class _HomeScreenState extends State<HomeScreen> {
             //stack layout så man kan positonera element ovanpå bättre
 
         //spara mer minne att importera alla statiska element, då vi lättare kan sätta const  på dem
-          const SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children:  [
-              ProductScreenUpper(),
-              ProductScreenMiddle(),
-              ProductScreenBottom()
-            ],
-          )
+          Stack(
+           clipBehavior: Clip.none,
+
+           children: [
+
+             const Column(
+                  // stretchar ut bakgrunden på hela skärmen
+                 crossAxisAlignment: CrossAxisAlignment.stretch,
+
+                 children:[
+                 // 40%  - Den gula rutan med texter
+                 Flexible(flex: 4, child: ProductScreenUpper(),
+                 ),
+                 // 70% - Den vita rutan med texter
+                 Flexible(flex: 7, child: ProductScreenMiddle(),
+                 ),
+               ]
+                 // Bilden av produkt
+             ), Positioned(
+                top: MediaQuery.of(context).size.height * 0.05,
+                left: MediaQuery.of(context).size.height * 0.75,
+                right: 0,
+               child:  Center(
+                 child: ProductImage(url: 'assets/images/honey1.png',
+                   width: MediaQuery.of(context).size.width * 0.2,
+                   height: MediaQuery.of(context).size.width * 0.2,
+                   fit: BoxFit.cover,),
+               ),
+               
+                )
+          ],
         ),
 
     );

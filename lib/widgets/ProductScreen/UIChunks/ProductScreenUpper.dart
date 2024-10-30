@@ -13,12 +13,34 @@ class ProductScreenUpper extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-  return const ProductPreviewCard(child: Column(
+    // returnerar gul container
+  return ProductPreviewCard(
+      // column layout inuti
+      child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      ProductTitleText(text: "WSSNFE"), // här kan vi lägga in data i child elementet
-      BodyText(text: "With hints of chocolate and honey", Color: Colors.white,),
-      HeaderText(text: "240 SEK", Color: Colors.white,)
+
+      Container(
+        alignment: Alignment.centerLeft,
+        margin: const EdgeInsets.only(left: 100),
+        child:const ProductTitleText(text: "WSSNFE") ,
+      ),
+
+      Container(
+        alignment: Alignment.centerLeft,
+        margin: const EdgeInsets.only(left: 100),
+        padding: const EdgeInsets.only(bottom: 50.0),
+        child:   const BodyText(text: "With hints of chocolate and honey", Color: Colors.white,),
+      ),
+
+      Container(
+        alignment: Alignment.centerLeft,
+        margin: const EdgeInsets.only(left: 100),
+        padding: const EdgeInsets.only(bottom: 0),
+        child:    HeaderText(text: "240 SEK", Color: Colors.white, fontSize: MediaQuery.of(context).size.height * 0.06,
+    ),
+      ),
+       // här kan vi lägga in data i child elementet
 
     ],
   ));

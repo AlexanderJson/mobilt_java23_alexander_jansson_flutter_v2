@@ -10,8 +10,8 @@ class ProductTitleText extends StatelessWidget{
 
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 28,
+      style:  TextStyle(
+        fontSize: MediaQuery.of(context).size.height * 0.1,
         fontWeight: FontWeight.bold,
         color: Colors.white,
         letterSpacing: 1.5,

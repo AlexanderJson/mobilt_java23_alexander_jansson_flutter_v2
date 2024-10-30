@@ -12,7 +12,7 @@ class ProductScreenBottom extends StatelessWidget {
         color: Colors.black,
         child: const Column(
           children: [
-            OrderBtn(),
+           // OrderBtn(height: 50.0 , width: 50.0,text: 'Order'),
           ]
         ),
     );
