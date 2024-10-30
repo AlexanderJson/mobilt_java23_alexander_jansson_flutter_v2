@@ -1,0 +1,6 @@
+1. Problem: många text element upprepas, men nästan alla element är dynamiska och har en
+relation till firebase datan som hämtas. Därav kan en ide vara att skapa element för varje
+collection/value (key/value) pair som finns?
+Nackdelar: Kan bli krångligt och mer oförutsägdbara problem + svårare att placera
+
+2.

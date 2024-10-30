@@ -1,0 +1,45 @@
+elevated buttons: order, confirm order
+
+
+______________________________________________________________________________________________________________________________________
+Home screen:
+
+Scaffold
+
+Appbar (page header)
+
+Gridview (product list)
+
+    - Card (holder)
+        - image
+        - text1(name)
+        - text2(attribute)
+
+______________________________________________________________________________________________________________________________________
+Product screen:
+
+Scaffold
+
+Card(?) - yellow background
+Appbar (product header)
+
+Text 1 = prod.description
+Text 2 = prod.price
+Image = prod.image
+
+Card2(?) - white background,rounded
+
+text 3 = prod.tags
+text 4= prod.location
+text 5= prod.alcohol
+
+text 6 = Ingredients header
+Expansiontile 1
+      text inside = ingredients
+
+text 7 = Attributes Header
+Expansiontile 2
+     text header 12,3 = color, flavor, taste
+     text inside 1,2,3 = attributes
+
+Elevated button - order

@@ -1,0 +1,8 @@
+
+
+1. Skapa grundläggande design i flutter med komponent listan
+2. skapa mappar och filer enligt MVVM
+3. hämta firebase värden (endast GET behövs för projektet just nu)
+4. interface för alla livscyklar på komponenter? initState, buildset, Stateset, Statedispose (läs mer)
+5. testa att skapa texts för key value firebase värden
+
