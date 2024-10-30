@@ -39,22 +39,20 @@ class _HomeScreenState extends State<HomeScreen> {
                  crossAxisAlignment: CrossAxisAlignment.stretch,
 
                  children:[
-                 // 40%  - Den gula rutan med texter
                  Flexible(flex: 4, child: ProductScreenUpper(),
                  ),
-                 // 70% - Den vita rutan med texter
-                 Flexible(flex: 7, child: ProductScreenMiddle(),
+                 Flexible(flex: 5, child: ProductScreenMiddle(),
                  ),
                ]
                  // Bilden av produkt
              ), Positioned(
-                top: MediaQuery.of(context).size.height * 0.05,
+                top: MediaQuery.of(context).size.height * 0,
                 left: MediaQuery.of(context).size.height * 0.75,
                 right: 0,
                child:  Center(
-                 child: ProductImage(url: 'assets/images/honey1.png',
-                   width: MediaQuery.of(context).size.width * 0.2,
-                   height: MediaQuery.of(context).size.width * 0.2,
+                 child: ProductImage(url: 'assets/images/honeyandbees.png',
+                   width: MediaQuery.of(context).size.width * 0.4,
+                   height: MediaQuery.of(context).size.height * 0.5,
                    fit: BoxFit.cover,),
                ),
                

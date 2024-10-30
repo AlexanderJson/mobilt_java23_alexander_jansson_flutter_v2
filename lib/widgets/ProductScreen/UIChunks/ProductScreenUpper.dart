@@ -22,20 +22,20 @@ class ProductScreenUpper extends StatelessWidget{
 
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 100),
+        margin: const EdgeInsets.only(left: 400),
         child:const ProductTitleText(text: "WSSNFE") ,
       ),
 
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 100),
+        margin: const EdgeInsets.only(left: 400),
         padding: const EdgeInsets.only(bottom: 50.0),
         child:   const BodyText(text: "With hints of chocolate and honey", Color: Colors.white,),
       ),
 
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 100),
+        margin: const EdgeInsets.only(left: 400),
         padding: const EdgeInsets.only(bottom: 0),
         child:    HeaderText(text: "240 SEK", Color: Colors.white, fontSize: MediaQuery.of(context).size.height * 0.06,
     ),

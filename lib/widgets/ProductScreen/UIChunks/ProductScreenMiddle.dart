@@ -21,35 +21,35 @@ class ProductScreenMiddle extends StatelessWidget {
         children: [
           Container(
               alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100),
+              padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
               child:  const CursiveText(text: 'CHOCOLATE, SOFT FLAVOR, LIQOURICE', Color: Colors.black,),
           ),
           Container(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100),
+            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
             child:   const HeaderText(text: 'New Zeeland, Marlborough', Color: Colors.black, fontSize: 20,),
 
           ),
           Container(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100),
+            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400),
             child:  const CursiveText(text: '250ml - Round Bottle', Color: Colors.black,),
           ),
           Container(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100,right: 400),
+            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400,right: 400),
             child:   const CustomExpansionTile(title: 'Ingredients: ', content: 'Chocolate, honey, liqourice, bees'),
           ),
           Container(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100, right: 400),
+            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 400, right: 400),
             child:   const CustomExpansionTile(title: 'Attributes: ',
                 content: 'A new type of honey with wonderful combinations of'
                     'chocolate, honey, liqourice and berries. '),
           ),
         Container(
             alignment: Alignment.centerRight,
-            padding: const EdgeInsets.only(top: 20, bottom: 20,left: 100, right: 400),
+            padding: const EdgeInsets.only(top: 20, bottom: 0,left: 0, right: 400),
             child: const Column(
               children: [
                 OrderBtn(height: 50.0 , width: 200.0,text: 'Order'),

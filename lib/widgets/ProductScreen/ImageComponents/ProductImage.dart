@@ -19,12 +19,12 @@ class ProductImage extends StatelessWidget {
       width: width,
       height: height,
       fit: fit,
-      loadingBuilder: (context, child, loadingProgess){
-        if(loadingProgess == null) return child;
+      loadingBuilder: (context, child, loadingProgress){
+        if(loadingProgress == null) return child;
         return Center(
           child: CircularProgressIndicator(
-            value: loadingProgess.expectedTotalBytes != null
-                ? loadingProgess.cumulativeBytesLoaded / loadingProgess.expectedTotalBytes!
+            value: loadingProgress.expectedTotalBytes != null
+                ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
                 : null,
           ),
         );

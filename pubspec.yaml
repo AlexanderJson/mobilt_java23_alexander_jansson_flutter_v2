@@ -58,6 +58,7 @@ flutter:
   assets:
     - assets/images/demoProduct.png
     - assets/images/honey1.png
+    - assets/images/honeyandbees.png
 
 
   # To add assets to your application, add an assets section, like this:
