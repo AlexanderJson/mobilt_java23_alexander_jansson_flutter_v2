@@ -6,8 +6,9 @@ class OrderBtn extends StatelessWidget{
   final double height;
   final double width;
   final String text;
+  final VoidCallback onPressed;
   // konstruktor
-  const OrderBtn({super.key, required this.height, required this.width, required this.text});
+  const OrderBtn({super.key, required this.height, required this.width, required this.text, required this.onPressed});
 
 
   @override
@@ -15,7 +16,8 @@ class OrderBtn extends StatelessWidget{
     return SizedBox(
         height: height,
         width: width,
-      child: ElevatedButton(onPressed: (){},
+      child: ElevatedButton(
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.darkBrown,
         ),

@@ -34,9 +34,6 @@ class ProductScreenUpper extends StatelessWidget{
               ),
 
 
-
-                 // här kan vi lägga in data i child elementet*/
-
               ],
             )));
             }

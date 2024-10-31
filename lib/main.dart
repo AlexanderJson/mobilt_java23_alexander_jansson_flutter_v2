@@ -5,6 +5,7 @@ import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/widgets/ProductScreen/UIChunks/HomeContent.dart';
 import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenBottom.dart';
+import 'package:go_router/go_router.dart';
 
 import 'ProductScreen.dart';
 
@@ -16,17 +17,34 @@ void main() {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context,child){
-          return MaterialApp(
-            home: ProductScreen(),
+          return MaterialApp.router(
+            routerConfig: _router,
+            title: 'Honey Shop',
+            theme: ThemeData(
+              primarySwatch: Colors.amber
+            ),
+
           );
         },
       )
 
   );
-  
-
-  
 }
+
+final GoRouter _router = GoRouter(
+  initialLocation: '/',
+  routes: [
+
+    GoRoute(path: '/',
+    name: 'home',
+    builder: (context, state) => HomeScreen(),
+    ),
+    GoRoute(path: '/product',
+    name: '/product',
+    builder: (context,state) => ProductScreen()
+    ),
+  ],
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

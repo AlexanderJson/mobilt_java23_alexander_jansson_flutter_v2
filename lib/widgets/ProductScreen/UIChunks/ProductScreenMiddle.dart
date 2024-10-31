@@ -10,6 +10,7 @@ import 'package:untitled/widgets/ProductScreen/TextComponents/CursiveText.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
 import '../ButtonComponents/OrderBtn.dart';
+import '../ImageComponents/ProductImage.dart';
 
 class ProductScreenMiddle extends StatelessWidget {
   const ProductScreenMiddle({super.key});
@@ -77,6 +78,22 @@ class ProductScreenMiddle extends StatelessWidget {
               height: 0.05.sh,
               width: 0.25.sw,
               text: 'Order',
+              onPressed:(){
+              showDialog(context: context, builder:(BuildContext context){
+                return AlertDialog(
+                    content: const ProductImage(
+                    url: 'https://as2.ftcdn.net/v2/jpg/00/81/39/25/1000_F_813925084_Fmjiu0jXpHq0f2Z6jkgVoFT5O6eFE3jM.jpg',
+                    fit: BoxFit.contain,
+                ), actions: [
+                  TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text("Close"))
+                ],
+
+                );
+              }
+
+              );
+
+              } ,
             ),
 
           ),

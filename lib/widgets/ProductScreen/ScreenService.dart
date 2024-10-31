@@ -13,12 +13,12 @@ class ScreenService{
       else if (screenWidth < 700) {
         return 20.sp;
       }
-      else if (screenWidth < 1000) {
-        return 10.sp;
+      else if (screenWidth < 1400) {
+        return 6.sp;
       }
 
       else if (screenWidth < 2500) {
-        return 5.sp;
+        return 2.sp;
       }
       else{
         return 10.sp;
@@ -30,7 +30,7 @@ class ScreenService{
     double screenWidth = ScreenUtil().screenWidth;
 
     if(screenWidth < 360){
-      return 20.sp;
+      return 10.sp;
     }
 
     else if (screenWidth < 700) {
@@ -45,6 +45,30 @@ class ScreenService{
     }
 
   }
+
+  static int editViewBuilder() {
+    double screenWidth = ScreenUtil().screenWidth;
+
+    if(screenWidth < 400){
+      return 2;
+    }
+
+    else if (screenWidth < 700) {
+      return 2;
+    }
+    else if (screenWidth < 1400) {
+      return 2;
+    }
+
+    else if (screenWidth < 2500) {
+      return 4;
+    }
+    else{
+      return 4;
+    }
+
+  }
+
 
   static double editTitle() {
     double screenWidth = ScreenUtil().screenWidth;
@@ -61,7 +85,7 @@ class ScreenService{
     }
 
     else if (screenWidth < 2500) {
-      return 19.sp;
+      return 15.sp;
     }
     else{
       return 10.sp;
@@ -69,7 +93,29 @@ class ScreenService{
 
   }
 
+  static double ImageDimensions() {
+    double screenWidth = ScreenUtil().screenWidth;
 
+    if(screenWidth < 400){
+      return 0.4.sw;
+    }
+
+
+    else if (screenWidth < 1000) {
+      return 0.5.sw;
+    }
+
+    else if (screenWidth < 1400) {
+      return 0.4.sw;
+    }
+    else if (screenWidth < 2500) {
+      return 0.sw;
+    }
+    else{
+      return 10.sp;
+    }
+
+  }
   static Map<String, double> editImage() {
     double screenWidth = ScreenUtil().screenWidth;
     double height = 0;
@@ -78,13 +124,12 @@ class ScreenService{
     if(screenWidth < 450){
       height = 0.4.sh;
       width = 0.1.sw;
-    }     //0.1 left ,
+    }
 
 
     else if (screenWidth < 2500) {
               height = 0.4.sh;
               width = 0.1.sw;
-              // 0.4 left , 0.5 bbottom
     }
     return {"height": height, "width": width};
 

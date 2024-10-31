@@ -11,9 +11,16 @@ class ProductScreenBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.black,
-        child: const Column(
+        child:  Column(
           children: [
-           // OrderBtn(height: 50.0 , width: 50.0,text: 'Order'),
+            OrderBtn(
+              height: 0.05.sh,
+              width: 0.25.sw,
+              text: 'Order',
+              onPressed:(){
+
+              } ,
+            ),
           ]
         ),
     );

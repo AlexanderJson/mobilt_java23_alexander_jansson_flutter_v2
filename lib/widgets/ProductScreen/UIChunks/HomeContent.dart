@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/widgets/ProductScreen/ScreenService.dart';
 import 'package:untitled/widgets/ProductScreen/TextComponents/CursiveText.dart';
 
 import '../ImageComponents/GridViewBuilder.dart';
@@ -30,7 +31,7 @@ class HomeContent extends StatelessWidget {
         Expanded(child: GridViewBuilder(
           itemCount: urls.length,
           spacing: 10.0.w,
-          crossAxisCount: 4,
+          crossAxisCount: ScreenService.editViewBuilder(),
           url: urls,
           itemBuilder: (context, index){
             return Container(
