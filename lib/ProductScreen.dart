@@ -15,6 +15,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 // stateful då skärmen måste vara dynamisk
 class ProductScreen extends StatefulWidget {
   @override
+
   _ProductScreen createState() => _ProductScreen();
 }
 
