@@ -19,10 +19,6 @@ class _ProductScreen extends State<ProductScreen> {
     //behållare för hela skärmen - returnerar allt inuti när screen instans kallas
     return Scaffold(
 
-      // längst upp på sidan, lite som header, kan sätta meny,logo osv här
-      appBar: AppBar(
-        title: const Text('Honey Eating & Co'),
-      ),
 
       // huvuddelen av sidan,
       body:
@@ -39,7 +35,7 @@ class _ProductScreen extends State<ProductScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
 
               children:[
-                Flexible(flex: 4, child: ProductScreenUpper(),
+                Flexible(flex: 6, child: ProductScreenUpper(),
                 ),
                 Flexible(flex: 5, child: ProductScreenMiddle(),
                 ),

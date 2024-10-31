@@ -25,9 +25,9 @@ class ProductScreenUpper extends StatelessWidget{
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
 
-         ProductTitleText(text: "WSSNFE", fontSize: paddingHorizontal * 0.4,) ,
-         BodyText(text: 'lkdsjcdsocdsojdsjso', Color: Colors.white, fontSize:  paddingHorizontal * 0.1),
-         HeaderText(text: "240 :- ", Color: Colors.white, fontSize: paddingHorizontal * 0.1,),
+         ProductTitleText(text: "HONEKEY", fontSize: paddingHorizontal * 0.4,) ,
+         BodyText(text: 'Autumn is here with the lastest', Color: Colors.white, fontSize:  paddingHorizontal * 0.1),
+         HeaderText(text: "240 :- ", Color: Colors.white, fontSize: paddingHorizontal * 0.2,),
        // här kan vi lägga in data i child elementet
 
     ],
