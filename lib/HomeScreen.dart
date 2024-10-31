@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:untitled/utils/AppColor.dart';
 import 'package:untitled/widgets/ProductScreen/BottomNavBar.dart';
 import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
@@ -24,19 +25,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
 
-  int selectedScreen = 0;
-  final List<Widget> allScreens =[
-    HomeContent(),
-    ProductScreen()
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      selectedScreen = index;
-    });
-  }
-
-
   @override
   Widget build(BuildContext context) {
     //behållare för hela skärmen - returnerar allt inuti när screen instans kallas
@@ -45,11 +33,16 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           title: const Text('Honey Eating & Co'),
         ),
-        body: allScreens[selectedScreen],
-        bottomNavigationBar: BottomNavBar(
-          selectedItem: selectedScreen,
-          onItemTapped: _onItemTapped,
-        ),
+        body:  HomeContent(),
+      bottomNavigationBar: BottomNavBar(
+        selectedItem: 0,
+        onItemTapped: (index) {
+          if (index == 0) {
+            context.go('/');
+          } else if (index == 1) {
+            context.go('/product');
+          }
+        }),
 
     );
   }

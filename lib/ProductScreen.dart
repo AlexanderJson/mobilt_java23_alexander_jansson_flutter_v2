@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:untitled/utils/AppColor.dart';
+import 'package:untitled/widgets/ProductScreen/BottomNavBar.dart';
 import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
 import 'package:untitled/widgets/ProductScreen/ScreenService.dart';
 import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenBottom.dart';
@@ -65,11 +67,18 @@ class _ProductScreen extends State<ProductScreen> {
                 fit: BoxFit.scaleDown,),
           )
         ],
-      ),
+      ),      bottomNavigationBar: BottomNavBar(
+        selectedItem: 0,
+        onItemTapped: (index) {
+          if (index == 0) {
+            context.go('/');
+          } else if (index == 1) {
+            context.go('/product');
+          }
+        }),
 
     );
-
   }
-
 }
+
 
