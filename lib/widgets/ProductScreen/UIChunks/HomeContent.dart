@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/widgets/ProductScreen/TextComponents/CursiveText.dart';
 
 import '../ImageComponents/GridViewBuilder.dart';
@@ -19,16 +20,16 @@ class HomeContent extends StatelessWidget {
 
       children: [
             Padding(
-            padding: const EdgeInsets.all(20),
-            child: HeaderText(text: 'Honey Eating & Company', Color: Theme.of(context).colorScheme.primary, fontSize: 50),
+            padding:  EdgeInsets.all(20.w),
+            child: HeaderText(text: 'Honey Eating & Company', Color: Theme.of(context).colorScheme.primary),
         ),
   
         CursiveText(text: 'We are totally real!', Color:Theme.of(context).colorScheme.primary),
-        const SizedBox(height: 10,),
+         SizedBox(height: 10.h,),
         
         Expanded(child: GridViewBuilder(
           itemCount: urls.length,
-          spacing: 10.0,
+          spacing: 10.0.w,
           crossAxisCount: 4,
           url: urls,
           itemBuilder: (context, index){
@@ -39,7 +40,7 @@ class HomeContent extends StatelessWidget {
                   image: AssetImage(urls[index]),
                   fit: BoxFit.cover,
                 ),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(8.0.r),
 
               ),
             );

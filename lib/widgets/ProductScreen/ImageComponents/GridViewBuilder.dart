@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GridViewBuilder extends StatelessWidget {
   const GridViewBuilder({super.key, required this.itemCount, required this.spacing, required this.crossAxisCount, required this.itemBuilder, required this.url});
@@ -18,7 +19,7 @@ class GridViewBuilder extends StatelessWidget {
       itemCount: itemCount,
       itemBuilder: (context, index){
         return Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding:  EdgeInsets.all(10.w),
         child:  Container(
           decoration: BoxDecoration(
             image: DecorationImage(

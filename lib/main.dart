@@ -2,8 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:untitled/HomeScreen.dart';
 import 'package:untitled/utils/AppColor.dart';
 import 'package:untitled/widgets/ProductScreen/ButtonComponents/OrderBtn.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:untitled/widgets/ProductScreen/UIChunks/HomeContent.dart';
+import 'package:untitled/widgets/ProductScreen/UIChunks/ProductScreenBottom.dart';
+
+import 'ProductScreen.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+
+      ScreenUtilInit(
+        designSize:  Size(360, 740),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context,child){
+          return MaterialApp(
+            home: ProductScreen(),
+          );
+        },
+      )
+
+  );
+  
+
+  
 }
 
 class MyApp extends StatelessWidget {

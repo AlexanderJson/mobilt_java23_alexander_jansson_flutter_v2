@@ -1,6 +1,8 @@
 // ruta som visar enskild produkt
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/utils/AppColor.dart';
 import 'package:untitled/widgets/ProductScreen/Containers/ProductPreviewCard.dart';
+import 'package:untitled/widgets/ProductScreen/ScreenService.dart';
 import 'package:untitled/widgets/ProductScreen/TextComponents/ProductTitleText.dart';
 import 'package:untitled/widgets/ProductScreen/TextComponents/HeaderText.dart';
 import 'package:untitled/widgets/ProductScreen/TextComponents/BodyText.dart';
@@ -13,24 +15,29 @@ class ProductScreenUpper extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    final paddingHorizontal = MediaQuery.of(context).size.width * 0.2;
+    final paddingHorizontal = 0.15.sw;
 
     // returnerar gul container
   return ProductPreviewCard(
         child: Padding(
         padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
 
-    // column layout inuti
-      child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+             Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ProductTitleText(text: "HONEKEY", fontSize: ScreenService.editTitle()),
+                  BodyText(text: 'Autumn is here!', Color: Colors.white, fontSize:  10.sp),
+                ],
+              ),
 
-         ProductTitleText(text: "HONEKEY", fontSize: paddingHorizontal * 0.4,) ,
-         BodyText(text: 'Autumn is here with the lastest', Color: Colors.white, fontSize:  paddingHorizontal * 0.1),
-         HeaderText(text: "240 :- ", Color: Colors.white, fontSize: paddingHorizontal * 0.2,),
-       // här kan vi lägga in data i child elementet
 
-    ],
-  )));
-  }
+
+                 // här kan vi lägga in data i child elementet*/
+
+              ],
+            )));
+            }
 }

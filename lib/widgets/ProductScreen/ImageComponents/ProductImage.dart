@@ -1,19 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../ScreenService.dart';
+
 class ProductImage extends StatelessWidget {
   final String url;
-  final double width;
-  final double height;
+
   final BoxFit fit;
 
 
+
   const ProductImage({
-    super.key, required this.url,required this.width, required this.height,  required this.fit
+    super.key, required this.url,  required this.fit
   });
 
   @override
   Widget build(BuildContext context) {
+    final imgDimensions = ScreenService.editImage();
+    final width = imgDimensions["width"];
+    final height = imgDimensions["height"];
+
+
     return Image.network(
       url,
       width: width,

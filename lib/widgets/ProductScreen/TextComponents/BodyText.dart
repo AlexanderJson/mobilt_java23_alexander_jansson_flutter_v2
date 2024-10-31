@@ -1,4 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../ScreenService.dart';
 
 class BodyText extends StatelessWidget {
   final String text;
@@ -8,15 +12,18 @@ class BodyText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AutoSizeText(
       text,
       style: TextStyle(
-        fontSize: fontSize,
+        fontSize: ScreenService.editFont(),
         color: Color,
-        letterSpacing: 1.5,
+        letterSpacing: 1.5.w,
       ),
       textAlign: TextAlign.center,
+      maxLines: 1,
+      minFontSize: 8.sp,
+      stepGranularity: 1.sp,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }
-
